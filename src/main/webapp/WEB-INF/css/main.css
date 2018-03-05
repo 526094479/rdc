@@ -8,6 +8,8 @@
 html,body{
 	height: 100%;
 }
+.clrfix{zoom:1;}
+.clrfix:after{ content: "";display: block;clear: both; }
 
 body{
 	background: linear-gradient(to bottom, #131313 0%,#02101c 100%);
@@ -46,17 +48,18 @@ a:link,a:hover,a:visited,a:active{
 
 .logo{
 	width: 100%;
-	margin: 110px 0;
-	text-align: center;
+	padding-top: 110px;
+	padding-left: 56px;
+	padding-right: 56px;
 }
 .logo1{
-	width: 25%;
+	width: 30%;
 	float: left;
-	margin: 30px 40px 0;
+	
 }
 .logo2{
-	width: 50%;
-	float: left;
+	width: 70%;
+	float: right;
 }
 .logo2>img:first-child{
 	margin-bottom: 30px;
@@ -64,30 +67,32 @@ a:link,a:hover,a:visited,a:active{
 img{
 	width: 90%;
 }
+.infor{
+	padding: 20px 80px;
+}
 .text1{
-	width: 15%;
-	float: left;
+	
 	font-weight: bold;
 	font-size: 70px;
 	color: #fff;
-	margin: 0 100px 0 100px;
-	text-align: left;
+	text-align: right;
+	
 	line-height: 1.2em;
 	border-right: 10px solid #fff;
-	padding-bottom: 20px;
+	
 }
 .text1>span:first-child{
 	font-size: 60px;
 	color: #F7FAB0;
 }
 .text2{
-	width: 60%;
-	float: left;
-	font-size: 45px;
+    padding-top: 10px;
+	padding-left: 60px;
+	font-size: 40px;
 	color: #F7FAB0;
 	text-align: left;
 	line-height: 1.5em;
-	margin-top: 10px;
+    vertical-align: middle;
 }
 /*.logo>img:first-child {
 	display: block;
@@ -129,8 +134,8 @@ img{
 }
 
 .groups-box {
-	margin: 0 auto;
-	width: 80%;
+	margin: 70px auto 0 auto;
+	width: 90%;
 	font-size: 15px;
 }
 
@@ -145,7 +150,6 @@ img{
     display: inline-block;
 	width: 100%;
 	margin-top: 20px;
-	margin-bottom: 50px;
     margin-left: -10px;
     margin-right: -10px;
 }
@@ -227,9 +231,50 @@ img{
 }
 .title{
 	width: 100%;
-	margin: 50px 0;
-	color: #e83426;
+	margin: 50px 0 30px 0;
+	color: #a1c4f2;
 	font-size: 35px;
+}
+.introdution_main{
+	font-size: 18px;
+	color: #fff;
+	text-align: initial; 
+	text-indent: 2em;
+}
+.introdution_contain{
+	padding: 16px 70px;
+	background-color:rgba(139, 151, 232, 0.1);
+}
+
+/*关于我们*/
+#about{
+	margin: 100px auto;
+}
+.about_contain{
+	width: 50%;
+	
+	float: left;
+}
+.about_title{
+	font-size: 20px;
+    color: #a1c4f2;
+}
+.about_slider{
+   width: 44%;
+   height: 440px;
+   float: right;
+   margin-top: 28px;
+}
+.slider_img{
+	background-color: rgba(139, 151, 232, 0.1);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+   
+}
+.about_text_wrapper{
+	padding: 16px 20px;
+	background-color:rgba(139, 151, 232, 0.1);
 }
 
 /*表单*/

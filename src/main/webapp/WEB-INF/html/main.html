@@ -8,120 +8,247 @@
 <link rel="stylesheet" type="text/css" href="..\css\main.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!-- <link href="..css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+<!-- MA5 Slider -->
+<link href="../css/ma5slider.min.css" rel="stylesheet" type="text/css">
+
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 <div class="canvas-box">
 	<canvas id="canvas">你的浏览器不支持canvas</canvas>
 </div>
-<div class="logo">
-	<div class="logo1">
-		<img src="..\img\计算机工程.png">
-	</div>
-	<div class="logo2">
-		<img src="..\img\研发中心.png">
-		<img src="..\img\文字.png">
-	</div>
-	<div class="clear"></div>
-	<div class="text1"><span>2018</span></br><span>正在</br>招新</span></div>
-	<div class="text2">宣讲会时间：2018/3/12 19.30</br>宣讲会地点：工一阶梯教室</br>招新笔试时间：2018/3/12 19.30</br>招新Q群：555555555</div>
-	<div class="clear"></div>
-	<div class="down-arrow floating-arrow"><a href="#outerdiv" class="js-scroll-trigger"><i class="fa fa-angle-down"></i></a></div>
-</div>
-    <nav id="mainNav"></nav>
-<div id="outerdiv"> 
-<div class="groups-box">
-	<div class="groups">
-		<div class="group" groupid='0'>
-			<div class="font_end_ggroup ggroup chosen">
-				<img src="..\img\前端.png">
-				<img src="..\img\前端2.png" class="text-primary mb-3 sr-icons">
+<div class="container">
+	<!--大标题 begin-->
+    <div class="clrfix">
+		<div class="logo clrfix">
+			<div class="logo1 col-md-3 ">
+				<img src="..\img\计算机工程.png">
 			</div>
-			<span>web前端开发</span>
-		</div>
-		<div class="group" groupid='1'>
-			<div class="background_ggroup ggroup">
-				<img src="..\img\后台.png" class="text-primary mb-3 sr-icons">
-				<img src="..\img\后台2.png">
+			<div class="logo2 col-md-9">
+				<img src="..\img\研发中心.png">
+				<img src="..\img\文字.png">
 			</div>
-			<span>JAVA后台开发</span>
 		</div>
-		<div class="group" groupid='2'>
-			<div class="android_ggroup ggroup">
-				<img src="..\img\安卓.png" class="text-primary mb-3 sr-icons">
-				<img src="..\img\安卓2.png">
+		<div class="infor clrfix">
+			<div class="text1 col-md-3"><span>2018</span></br><span>正在</br>招新</span></div>
+			<div class="text2 col-md-9">宣讲会时间：2018/3/12 19.30</br>宣讲会地点：工一阶梯教室</br>招新笔试时间：2018/3/12 19.30</br>招新Q群：555555555</div>
+		</div>
+	</div>
+	<!--大标题 end-->
+	<!--各组介绍 begin-->
+		<div class="down-arrow floating-arrow"><a href="#outerdiv" class="js-scroll-trigger"><i class="fa fa-angle-down"></i></a></div>
+		<nav id="mainNav"></nav>
+	<div id="outerdiv"> 
+	<div class="groups-box">
+		<div class="groups">
+			<div class="group" groupid='0'>
+				<div class="font_end_ggroup ggroup chosen">
+					<img src="..\img\前端.png">
+					<img src="..\img\前端2.png" class="text-primary mb-3 sr-icons">
+				</div>
+				<span>web前端开发</span>
 			</div>
-			<span>Android移动开发</span>
-		</div>
-		<div class="group" groupid='3'>
-			<div class="big_data_ggroup ggroup">
-				<img src="..\img\大数据.png" class="text-primary mb-3 sr-icons">
-				<img src="..\img\大数据2.png">
+			<div class="group" groupid='1'>
+				<div class="background_ggroup ggroup">
+					<img src="..\img\后台.png" class="text-primary mb-3 sr-icons">
+					<img src="..\img\后台2.png">
+				</div>
+				<span>JAVA后台开发</span>
 			</div>
-			<span>大数据</span>
+			<div class="group" groupid='2'>
+				<div class="android_ggroup ggroup">
+					<img src="..\img\安卓.png" class="text-primary mb-3 sr-icons">
+					<img src="..\img\安卓2.png">
+				</div>
+				<span>Android移动开发</span>
+			</div>
+			<div class="group" groupid='3'>
+				<div class="big_data_ggroup ggroup">
+					<img src="..\img\大数据.png" class="text-primary mb-3 sr-icons">
+					<img src="..\img\大数据2.png">
+				</div>
+				<span>大数据</span>
+			</div>
+			<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
+	</div>
+
+	<div class="introdution_box">
+		<div class="introdution slideIn">
+			<div class="title">前端开发</div>
+		    <div class="introdution_contain">
+				<p class="introdution_main"> RDC Web前端开发组，基于 HTML / CSS / Javascript 前端语言进行开发，专注于呈现良好的网站界面和网页交互，提供给用户更好的视觉冲击和用	户体验，是当前就业面最广的方向。组内定期开展技术分享会，与此同时，一些已经进入阿里、腾讯实习工作的师兄师姐也会经常与我们进行经验交流和指导。
+				在技术实力雄厚的同时，最重要的一点是，我们有最和谐的性别比例和不能更融洽的相处气氛。</p>	
+				<p class="introdution_main">我们需要：基本的C语言理解，0或0以上的前端基础，不止的学习热忱，出色的学习能力，良好的全局把控力，还有最重要的一点是，细腻。当然，如果你有良好的审美或是一定的PS基础，那面试时可能会获得一定印象分哦~</p>
+				<p class="introdution_main">假如你曾想过给自己写一个符合自己所有想象的个人主页；假如你曾想过在一个特殊的日子里用网页的形式给喜欢的人送上一份特殊的礼物；又或者你曾想过会有一个网页，当你打开的时候，里面用着你最喜欢的表达方式，写满了你的全部故事。那就来我们这试一试。
+				是的，研发前端组，一个情怀和实力兼具的队伍。如果你是一个充满想象的人，过来拥抱我们。</p>
+		    </div> 
+		</div>
+
+		<div class="introdution" style="display: none;">
+			<div class="title">后台开发</div>
+			<div class="introdution_contain">
+				<p class="introdution_main">研发后台小组致力于JavaWeb开发，专注于各种前沿的Java技术和实践能力的结合，主要任务是进行业务逻辑的处理和与数据库、服务器等的交互。研发后台组在网络建设、数据处理，数据交互等方面都积累了自己独特的经验并取得了很好的成绩。</p>
+				<p class="introdution_main">	当今网络无所不及，无论是安卓移动开发或是网页开发，都必须依靠后台技术的支持，进行和服务器的沟通，才能保证产品的安全与完整。在项目开发中，后台永远都起到了中流砥柱的作用，可以说一直是黑科技的担当。</p>
+				<p class="introdution_main">研发后台采用自主学习，自由学习的模式，鼓励组员拓宽学习范围，与师兄师姐一起合作创新。组内经常举行内部交流以及内部活动，提升技术，增进感情。同时，研发后台组跟其他两组的关系十分融洽~加入研发后台组，我们将一起探寻Linux的世界，一起感受掌控数据的强大。</p>
+				<p class="introdution_main">如果你想成为一个思维活跃不断的人，如果你希望掌握网络攻防技术，如果你追求完善完美，那么研发后台小组是你的不二选择！我们，等你到来！</p>
+			</div>
+		</div>
+
+		<div class="introdution" style="display: none;">
+			<div class="title">安卓开发</div>
+			<div class="introdution_contain">
+				<p class="introdution_main">RDC Android开发组，是RDC工作室安卓App项目的核心研发团队，专注基于Java语言的主流app开发与Android技术的钻研。我们采用自由高效的管理模式、自由的时间安排，定期的技术分享会与师兄经验交流会等；拥有融洽的技术氛围，遇到技术难题，随时提问，一起探讨解决方法；培养友好的内部关系，消除年级隔阂，和谐相处。</p>
+				<p class="introdution_main">同时，研发Android组还是研发的才艺担当，16届的IT歌手五强研发安卓组占据了两个。Android组不仅学习氛围浓厚，也是充满着浓浓才艺氛围的一组。</p>
+				<p class="introdution_main">研发Android组有着一群志同道合的朋友，跟你一起探索Android的神秘王国，深入学习Java和Android。除了项目之外，倘若你还有其他新颖可行的想法，还能开发出各种炫酷的App或是小游戏给大家使用。只要你有足够的热情与创意，总能发现许多有趣的东西。</p>
+				<p class="introdution_main">假如你热爱技术、热爱Android，拥有扎实的C语言基础（有Java或Android基础更佳），善于自主钻研，有责任感并有良好的团队合作精神，那么，你正是我们苦苦寻找的小伙伴！加入我们吧!</p>
+		    </div>
+		</div>
+
+		<div class="introdution" style="display: none;">
+			<div class="title">大数据</div>
+			<div class="introdution_contain">
+				<p class="introdution_main">RDC Android开发组，是RDC工作室安卓App项目的核心研发团队，专注基于Java语言的主流app开发与Android技术的钻研。我们采用自由高效的管理模式、自由的时间安排，定期的技术分享会与师兄经验交流会等；拥有融洽的技术氛围，遇到技术难题，随时提问，一起探讨解决方法；培养友好的内部关系，消除年级隔阂，和谐相处。</p>
+				<p class="introdution_main">同时，研发Android组还是研发的才艺担当，16届的IT歌手五强研发安卓组占据了两个。Android组不仅学习氛围浓厚，也是充满着浓浓才艺氛围的一组。</p>
+				<p class="introdution_main">研发Android组有着一群志同道合的朋友，跟你一起探索Android的神秘王国，深入学习Java和Android。除了项目之外，倘若你还有其他新颖可行的想法，还能开发出各种炫酷的App或是小游戏给大家使用。只要你有足够的热情与创意，总能发现许多有趣的东西。</p>
+				<p class="introdution_main">假如你热爱技术、热爱Android，拥有扎实的C语言基础（有Java或Android基础更佳），善于自主钻研，有责任感并有良好的团队合作精神，那么，你正是我们苦苦寻找的小伙伴！加入我们吧!</p>
+		    </div>
+		</div>
+	</div>
+    <!--各组介绍 end-->
+	
+	<!--关于研发 begin-->
+	<div id="about" class="clrfix">
+		<div class="about_contain">
+			<p class="about_title">关于我们</p>
+			<div class="about_text_wrapper">
+				<p class="introdution_main">2001年，研发中心成立，至今已经16年历史，是计算机学院最为老牌的团队。这么多年来，团队成员一直致力于互联网Web开发、安卓手机应用、数据库以及图形图像等技术的学习和开发。</p>
+				<p class="introdution_main">我们在基本专业课程和技能训练的基础上，通过项目过程的进一步学习，提高自身解决问题的能力、学习能力以及团队协作能力。</p>
+				<p class="introdution_main">团队已有大批师兄师姐进入了百度、腾讯、华为、网易、阿里巴巴、金山等公司进行工作。这里有优秀的学习榜样、丰富的学习资源、良好的学习氛围、珍贵的项目经验，还有活跃愉快的相处气氛。</p>
+				<p class="introdution_main">如果你有出色的学习能力、对知识有近乎渴望的追求，以及良好的抗压力和团队协作力，那就加入我们吧！在这里和你的队友们一起打造属于你们的BAT之路！</p>
+			</div>
+		</div>
+		<div class="ma5slider anim-horizontal horizontal-dotss anim-horizontal loop-mode about_slider autoplay">
+			<div class="slides">
+				<a href="#slide-1"><img class="slider_img" src="../img/1.jpg" alt=""></a>
+				<a href="#slide-2"><img class="slider_img" src="../img/2.jpg" alt=""></a>
+				<a href="#slide-3"><img class="slider_img" src="../img/3.jpg" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<!--关于研发 end-->
+
+	<div class="form" id='form'>
+		<!-- <div class="title">立即报名</div> -->
+		<input type="text" name="name" class="input" placeholder='名字'>
+		<input type="text" name="name" class="input" placeholder='学号'>
+		<input type="text" name="name" class="input" placeholder='性别'>
+		<input type="text" name="name" class="input" placeholder='学院专业班级'>
+		<input type="text" name="name" class="input" placeholder='职务'>
+		<input type="text" name="name" class="input" placeholder='手机号码'>
+		<input type="text" name="name" class="input" placeholder='短号'>
+		<input type="text" name="name" class="input" placeholder='邮箱'>
+		<input type="text" name="name" class="input" placeholder='QQ号码'>
+		<input type="text" name="name" class="input" placeholder='自我期望'>
+		<input type="text" name="name" class="input2" placeholder='特长'>
+		<select type="text" name="name" class="input2" placeholder='所选组别'>
+			<option value ="Web">Web前端</option>
+			<option value ="Java">JAVA后台</option>
+			<option value="Android">Android移动开发</option>
+			<option value="big_data">大数据</option>
+		</select>
+		<textarea type="text" name="name" class="input3" placeholder='自我介绍'></textarea>
+		<div class="button"><button class="joinUs" id="submit">立即报名</button></a></div>
+	</div>
+
 	</div>
 </div>
 
-<div class="introdution_box">
-	<div class="introdution slideIn">
-		<div class="title">前端开发</div>
-		<pre class="introdution_main">    RDC Web前端开发组，基于 HTML / CSS / Javascript 前端语言进行开发，专注于呈现良好的网站界面和网页交互，提供给用户更好的视觉冲击和用	户体验，是当前就业面最广的方向。组内定期开展技术分享会，与此同时，一些已经进入阿里、腾讯实习工作的师兄师姐也会经常与我们进行经验交流和指导。在技术实力雄厚的同时，最重要的一点是，我们有最和谐的性别比例和不能更融洽的相处气氛。
-    我们需要：基本的C语言理解，0或0以上的前端基础，不止的学习热忱，出色的学习能力，良好的全局把控力，还有最重要的一点是，细腻。当然，如果你有良好的审美或是一定的PS基础，那面试时可能会获得一定印象分哦~
-    假如你曾想过给自己写一个符合自己所有想象的个人主页；假如你曾想过在一个特殊的日子里用网页的形式给喜欢的人送上一份特殊的礼物；又或者你曾想过会有一个网页，当你打开的时候，里面用着你最喜欢的表达方式，写满了你的全部故事。那就来我们这试一试。
-    是的，研发前端组，一个情怀和实力兼具的队伍。如果你是一个充满想象的人，过来拥抱我们。</pre>
-	</div>
 
-	<div class="introdution" style="display: none;">
-		<div class="title">后台开发</div>
-		<pre class="introdution_main">    研发后台小组致力于JavaWeb开发，专注于各种前沿的Java技术和实践能力的结合，主要任务是进行业务逻辑的处理和与数据库、服务器等的交互。研发后台组在网络建设、数据处理，数据交互等方面都积累了自己独特的经验并取得了很好的成绩。
-    当今网络无所不及，无论是安卓移动开发或是网页开发，都必须依靠后台技术的支持，进行和服务器的沟通，才能保证产品的安全与完整。在项目开发中，后台永远都起到了中流砥柱的作用，可以说一直是黑科技的担当。
-    研发后台采用自主学习，自由学习的模式，鼓励组员拓宽学习范围，与师兄师姐一起合作创新。组内经常举行内部交流以及内部活动，提升技术，增进感情。同时，研发后台组跟其他两组的关系十分融洽~加入研发后台组，我们将一起探寻Linux的世界，一起感受掌控数据的强大。
-    如果你想成为一个思维活跃不断的人，如果你希望掌握网络攻防技术，如果你追求完善完美，那么研发后台小组是你的不二选择！我们，等你到来！</pre>
-	</div>
-
-	<div class="introdution" style="display: none;">
-		<div class="title">安卓开发</div>
-		<pre class="introdution_main">    RDC Android开发组，是RDC工作室安卓App项目的核心研发团队，专注基于Java语言的主流app开发与Android技术的钻研。我们采用自由高效的管理模式、自由的时间安排，定期的技术分享会与师兄经验交流会等；拥有融洽的技术氛围，遇到技术难题，随时提问，一起探讨解决方法；培养友好的内部关系，消除年级隔阂，和谐相处。
-    同时，研发Android组还是研发的才艺担当，16届的IT歌手五强研发安卓组占据了两个。Android组不仅学习氛围浓厚，也是充满着浓浓才艺氛围的一组。
-    研发Android组有着一群志同道合的朋友，跟你一起探索Android的神秘王国，深入学习Java和Android。除了项目之外，倘若你还有其他新颖可行的想法，还能开发出各种炫酷的App或是小游戏给大家使用。只要你有足够的热情与创意，总能发现许多有趣的东西。
-    假如你热爱技术、热爱Android，拥有扎实的C语言基础（有Java或Android基础更佳），善于自主钻研，有责任感并有良好的团队合作精神，那么，你正是我们苦苦寻找的小伙伴！加入我们吧!</pre>
-	</div>
-
-	<div class="introdution" style="display: none;">
-		<div class="title">大数据</div>
-		<pre class="introdution_main">    RDC Android开发组，是RDC工作室安卓App项目的核心研发团队，专注基于Java语言的主流app开发与Android技术的钻研。我们采用自由高效的管理模式、自由的时间安排，定期的技术分享会与师兄经验交流会等；拥有融洽的技术氛围，遇到技术难题，随时提问，一起探讨解决方法；培养友好的内部关系，消除年级隔阂，和谐相处。
-    同时，研发Android组还是研发的才艺担当，16届的IT歌手五强研发安卓组占据了两个。Android组不仅学习氛围浓厚，也是充满着浓浓才艺氛围的一组。
-    研发Android组有着一群志同道合的朋友，跟你一起探索Android的神秘王国，深入学习Java和Android。除了项目之外，倘若你还有其他新颖可行的想法，还能开发出各种炫酷的App或是小游戏给大家使用。只要你有足够的热情与创意，总能发现许多有趣的东西。
-    假如你热爱技术、热爱Android，拥有扎实的C语言基础（有Java或Android基础更佳），善于自主钻研，有责任感并有良好的团队合作精神，那么，你正是我们苦苦寻找的小伙伴！加入我们吧!</pre>
-	</div>
-</div>
-<div class="form">
-	<!-- <div class="title">立即报名</div> -->
-	<input type="text" name="name" class="input" placeholder='名字'>
-	<input type="text" name="name" class="input" placeholder='手机号码'>
-	<input type="text" name="name" class="input" placeholder='QQ号码'>
-	<input type="text" name="name" class="input" placeholder='专业'>
-	<select type="text" name="name" class="input2" placeholder='所选组别'>
-		<option value ="Web">Web前端</option>
-  		<option value ="Java">JAVA后台</option>
-  		<option value="Android">Android移动开发</option>
-  		<option value="big_data">大数据</option>
-	</select>
-	<textarea type="text" name="name" class="input3" placeholder='自我介绍'></textarea>
-	<div class="button"><button class="joinUs">立即报名</button></a></div>
-</div>
-
-</div>
 <script src="..\js\jquery-1.11.3.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="..\js\canvas.js"></script>
 <script src="..\js\main.js"></script>
 <!-- 滚动 -->
 <!-- <script src="..\vendor\jquery\jquery.min.js"></script> -->
-<script src="..\js\jquery.easing.min.js"></script>
-<script src="..\js\bootstrap.bundle.min.js"></script>
-<script src="..\js\scrollreveal.min.js"></script>
-<script src="..\js\jquery.magnific-popup.min.js"></script>
-<script src="..\js\creative.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/scrollreveal.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/creative.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/ma5slider.min.js"></script>
+<script src="../js/gt.js"></script>
+<!-- Touch Event Support for jQuery UI -->
+<script src="../js/jquery.ui.touch-punch.min.js"></script>
+<script>
+    var handler2 = function (captchaObj) {
+        $("#submit").click(function (e) {
+            var result = captchaObj.getValidate();
+            if (!result) {
+            	alert('请先验证!');
+            } else {
+                $.ajax({
+                    url: '/rdc/user/validate',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        name: $('.input:eq(0)').val(),
+                        number: $('.input:eq(1)').val(),
+                        sex: $('.input:eq(2)').val(),
+                        majorAndClass: $('.input:eq(3)').val(),
+                        duties: $('.input:eq(4)').val(),
+                        phone: $('.input:eq(5)').val(),
+                        shortNumber: $('.input:eq(6)').val(),
+                        email: $('.input:eq(7)').val(),
+                        QQ: $('.input:eq(8)').val(),
+                        organize: $('.input2:eq(1)').val(),
+                        speciality: $('.input2:eq(0)').val(),
+                        introduce: $('.input3:eq(0)').val(),
+                        purpose: $('.input:eq(9)').val(),
+                        challenge: result.geetest_challenge,
+                        validate: result.geetest_validate,
+                        seccode: result.geetest_seccode
+                    },
+                    success: function (data) {
+                        if (data.status === 'success') {
+                            alert('报名成功');
+                        } else if (data.status === 'fail') {
+                            alert('报名失败');
+                        }
+                    }
+                })
+            }
+            e.preventDefault();
+        });
+        // 将验证码加到id为form的元素里，同时会有三个input的值用于表单提交
+        captchaObj.appendTo("#form");
+        captchaObj.onReady(function () {
+            $("#wait2").hide();
+        });
+        // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+    };
+    $.ajax({
+        url: "/rdc/user/ready?t=" + (new Date()).getTime(), // 加随机数防止缓存
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+            // 调用 initGeetest 初始化参数
+            // 参数1：配置参数
+            // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它调用相应的接口
+            initGeetest({
+                gt: data.gt,
+                challenge: data.challenge,
+                new_captcha: data.new_captcha, // 用于宕机时表示是新验证码的宕机
+                offline: !data.success, // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+                product: "popup", // 产品形式，包括：float，popup
+                width: "100%"
+                // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+            }, handler2);
+        }
+    });
+</script>
 </body>
 </html>

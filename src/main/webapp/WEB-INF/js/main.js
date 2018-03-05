@@ -17,7 +17,10 @@ $(function () {
 		}
 	});	
 
-
+         
 	//$('.group :first').click();
 	// 在html里直接给前端加上chosen的class类，这样每次加载时不用等一秒才动
+
+
+	$('.ma5slider').ma5slider();
 })
