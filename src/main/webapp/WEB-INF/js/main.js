@@ -23,4 +23,44 @@ $(function () {
 
 
 	$('.ma5slider').ma5slider();
+
+    
+   /***菜单 */
+   /*
+	$(window).scroll(()=>{ 
+		let t = document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop,
+			m_in = $("#outerdiv"),
+			m_ab = $("#about"),
+			m_fo = $("#form"),
+			in_t = m_in.offset().top,
+			ab_t = m_ab.offset().top,
+			fo_t = m_fo.offset().top;
+			
+		    if(t<in_t-100)   $(".m_item").css("right","-100px");
+			if(t>=in_t-100)  $(".m_in").css("right","-20px").siblings().css("right","-100px"); 
+			if(t>=ab_t-100)  $(".m_ab").css("right","-20px").siblings().css("right","-100px");
+			if(t>fo_t-200)   $(".m_fo").css("right","-20px").siblings().css("right","-100px");	
+	 })
+  */
+
+	 /**下拉组别菜单 */
+	 $(".down").on('click',()=>{
+		 $("#select_menu").slideToggle();
+	 })
+	 $(".select_item").on('click',function(){
+		 let val = $(this).text();
+		 $("#selected").text(val);
+		$("#select_menu").slideToggle();
+	 })
+
+	 $(".sex_choic").on('click',function(){
+		if($(".sex").text()=='男'){
+			  $(".sex").text("女");
+			$(".sex_val").attr('value','女');
+		}
+		else {
+			$(".sex").text("男");
+			$(".sex_val").attr('value','男');
+		}
+	 })
 })
