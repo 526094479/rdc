@@ -19,7 +19,7 @@
 		liuxing();
 
 		// render();
-		document.body.addEventListener('mousemove',mouseMove);
+		//document.body.addEventListener('mousemove',mouseMove);
 	}
 
 	function liuxing(){
@@ -30,11 +30,22 @@
 		},time)
 	}
 
-	function mouseMove(e){
-		//因为是整屏背景，这里不做坐标转换
-		mouseX = e.clientX;
-		mouseY = e.clientY;
-	}
+	// function mouseMove(e){
+	// 	//因为是整屏背景，这里不做坐标转换
+	// 	mouseX = e.clientX;
+	// 	mouseY = e.clientY;
+	// }
+
+	//监听浏览器窗口变化
+	window.addEventListener('resize',
+		function resize(e){
+			if(WINDOW_WIDTH < document.body.offsetWidth || WINDOW_HEIGHT < document.body.offsetHeight){
+				WINDOW_WIDTH = document.body.offsetWidth;
+				WINDOW_HEIGHT = document.body.offsetHeight;
+				canvas.width = WINDOW_WIDTH;
+				canvas.height = WINDOW_HEIGHT;
+			}
+		});
 
 	function render(){
 		context.fillStyle = 'rgba(0,0,0,0.3)';
