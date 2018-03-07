@@ -63,4 +63,91 @@ $(function () {
 			$(".sex_val").attr('value','男');
 		}
 	 })
+var handler2 = function (captchaObj) {
+        $("#submit").click(function (e) {
+            var validate = captchaObj.getValidate();
+            var mess = result();
+            if (!validate)
+            	alert('请先验证!');
+            else if(mess != true)
+            	alert(mess);  
+            else{
+                $.ajax({
+                    url: '/rdc/user/validate',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        name: $('.input:eq(0)').val(),
+                        number: $('.input:eq(1)').val(),
+                        sex: $('.input:eq(2)').val(),
+                        majorAndClass: $('.input:eq(3)').val(),
+                        duties: $('.input:eq(4)').val(),
+                        phone: $('.input:eq(5)').val(),
+                        shortNumber: $('.input:eq(6)').val(),
+                        email: $('.input:eq(7)').val(),
+                        QQ: $('.input:eq(8)').val(),
+                        organize: $('.input2:eq(1)').val(),
+                        speciality: $('.input2:eq(0)').val(),
+                        introduce: $('.input3:eq(0)').val(),
+                        purpose: $('.input:eq(9)').val(),
+                        challenge: result.geetest_challenge,
+                        validate: result.geetest_validate,
+                        seccode: result.geetest_seccode
+                    },
+                    success: function (data) {
+                        if (data.status === 'success') {
+                            alert('报名成功');
+                        } else if (data.status === 'fail') {
+                            alert('报名失败');
+                        }
+                    }
+                })
+            }
+            e.preventDefault();
+        });
+        // 将验证码加到id为form的元素里，同时会有三个input的值用于表单提交
+        captchaObj.appendTo("#form");
+        captchaObj.onReady(function () {
+            $("#wait2").hide();
+        });
+        // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+    };
+    $.ajax({
+        url: "/rdc/user/ready?t=" + (new Date()).getTime(), // 加随机数防止缓存
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+            // 调用 initGeetest 初始化参数
+            // 参数1：配置参数
+            // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它调用相应的接口
+            initGeetest({
+                gt: data.gt,
+                challenge: data.challenge,
+                new_captcha: data.new_captcha, // 用于宕机时表示是新验证码的宕机
+                offline: !data.success, // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+                product: "popup", // 产品形式，包括：float，popup
+                width: "100%"
+                // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+            }, handler2);
+        }
+    });
 })
+
+//前端验证
+function result(){
+	if(!/^[^ ]+$/.test($("input[name='name']").val()))
+		return '名字不能为空或不能有空格!';
+	if(!/^\d{10}$/.test($("input[name='number']").val()))
+		return '请填写正确的学号!';
+	if(!/^[^ ]+$/.test($("input[name='majorAndClass']").val()))
+		return '学院专业班级不能为空或不能有空格!';
+	if(!/^1[3,4,5,7,8]\d{9}$/.test($("input[name='phone']").val()))
+		return '请填写正确的手机号码!';
+	if($("input[name='email']").val() && !/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($("input[name='email']").val()))
+		return '请填写正确的邮箱!';
+	if(!/^\d{1,}$/.test($("input[name='QQ']").val()))
+		return '请填写正确的QQ号码!';
+	if(!/^[^ ]+$/.test($("textarea[name='introduce']").val()))
+		return '自我简介不能为空或不能有空格!';
+	return true;
+}
