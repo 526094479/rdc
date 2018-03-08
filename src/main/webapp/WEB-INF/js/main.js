@@ -18,10 +18,9 @@ $(function () {
 		}
 	});	
 
-         
+
 	//$('.group :first').click();
 	// 在html里直接给前端加上chosen的class类，这样每次加载时不用等一秒才动
-
 
 	$('.ma5slider').ma5slider();
 
@@ -76,11 +75,14 @@ $(function () {
             $(".f_title").addClass('faguang');
      })
 var handler2 = function (captchaObj) {
+        $(".geetest_holder").hide();
         $("#submit").click(function (e) {
             var validate = captchaObj.getValidate();
             var mess = result();
-            if (!validate)
-            	alert('请先验证!');
+            if (!validate){
+                $(".geetest_holder").click();
+            	// alert('请先验证!');
+            }
             else if(mess != true)
             	alert(mess);  
             else{
@@ -102,9 +104,9 @@ var handler2 = function (captchaObj) {
                         speciality: $("input[name='speciality']").val(),
                         introduce: $("textarea[name='introduce']").val(),
                         purpose: $("textarea[name='name']").val(),
-                        challenge: result.geetest_challenge,
-                        validate: result.geetest_validate,
-                        seccode: result.geetest_seccode
+                        challenge: validate.geetest_challenge,
+                        validate: validate.geetest_validate,
+                        seccode: validate.geetest_seccode
                     },
                     success: function (data) {
                         if (data.status === 'success') {
