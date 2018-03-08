@@ -76,19 +76,19 @@ $(function () {
      })
     var handler2 = function (captchaObj) {
         //$(".geetest_holder").hide();
+        var validate = captchaObj.getValidate();
         $("#submit").click(function (e) {
             var mess = result();
             if(mess != true)
             	alert(mess); 
             else{
-                var validate = captchaObj.getValidate();
                 if(!validate)
                 $(".geetest_holder").click();
                 // alert('请先验证!');
                 $.ajax({
                     url: '/rdc/user/validate',
                     type: 'POST',
-                    dataType: 'json',
+                    //dataType: 'json',
                     data: {
                         name: $("input[name='name']").val(),
                         number: $("input[name='number']").val(),
@@ -108,7 +108,8 @@ $(function () {
                         seccode: validate.geetest_seccode
                     },
                     success: function (data) {
-                        if (data.status == 'success') {
+                        data = $.parseJSON(data);
+                        if (data.result == 'success') {
                             alert('报名成功');
                         } else {
                             alert('报名失败');
