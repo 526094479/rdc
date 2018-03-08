@@ -76,8 +76,8 @@ $(function () {
      })
     var handler2 = function (captchaObj) {
         //$(".geetest_holder").hide();
+        const validate = captchaObj.getValidate();
         $("#submit").click(function (captchaObj) {
-            var validate = captchaObj.getValidate();
             var mess = result();
             if(mess != true)
             	alert(mess); 
@@ -85,36 +85,39 @@ $(function () {
                 if(!validate)
                 $(".geetest_holder").click();
                 // alert('请先验证!');
-                $.ajax({
-                    url: '/rdc/user/validate',
-                    type: 'POST',
-                    //dataType: 'json',
-                    data: {
-                        name: $("input[name='name']").val(),
-                        number: $("input[name='number']").val(),
-                        sex: $("input[name='sex']").val(),
-                        majorAndClass: $("input[name='majorAndClass']").val(),
-                        duties: $("input[name='duties']").val(),
-                        phone: $("input[name='phone']").val(),
-                        shortNumber: $("input[name='shortNumber']").val(),
-                        email: $("input[name='email']").val(),
-                        QQ: $("input[name='QQ']").val(),
-                        organize: $("#selected").html(),
-                        speciality: $("input[name='speciality']").val(),
-                        introduce: $("textarea[name='introduce']").val(),
-                        purpose: $("textarea[name='name']").val(),
-                        challenge: validate.geetest_challenge,
-                        validate: validate.geetest_validate,
-                        seccode: validate.geetest_seccode
-                    },
-                    success: function (data) {
-                        data = $.parseJSON(data);
-                        if (data.result == 'success') {
-                            alert('报名成功');
-                        } else {
-                            alert('报名失败');
+                captchaObj.onSuccess(function(){
+                    $.ajax({
+                        url: '/rdc/user/validate',
+                        type: 'POST',
+                        //dataType: 'json',
+                        data: {
+                            name: $("input[name='name']").val(),
+                            number: $("input[name='number']").val(),
+                            sex: $("input[name='sex']").val(),
+                            majorAndClass: $("input[name='majorAndClass']").val(),
+                            duties: $("input[name='duties']").val(),
+                            phone: $("input[name='phone']").val(),
+                            shortNumber: $("input[name='shortNumber']").val(),
+                            email: $("input[name='email']").val(),
+                            QQ: $("input[name='QQ']").val(),
+                            organize: $("#selected").html(),
+                            speciality: $("input[name='speciality']").val(),
+                            introduce: $("textarea[name='introduce']").val(),
+                            purpose: $("textarea[name='name']").val(),
+                            challenge: validate.geetest_challenge,
+                            validate: validate.geetest_validate,
+                            seccode: validate.geetest_seccode
+                        },
+                        success: function (data) {
+                            data = $.parseJSON(data);
+                            if (data.result == 'success') {
+                                alert('报名成功');
+                                validate.reset();
+                            } else {
+                                alert('报名失败');
+                            }
                         }
-                    }
+                    })
                 })
             }
         });
