@@ -99,7 +99,7 @@ $(function () {
                         shortNumber: $("input[name='shortNumber']").val(),
                         email: $("input[name='email']").val(),
                         QQ: $("input[name='QQ']").val(),
-                        organize: $("#selected").val(),
+                        organize: $("#selected").html(),
                         speciality: $("input[name='speciality']").val(),
                         introduce: $("textarea[name='introduce']").val(),
                         purpose: $("textarea[name='name']").val(),
@@ -108,9 +108,9 @@ $(function () {
                         seccode: validate.geetest_seccode
                     },
                     success: function (data) {
-                        if (data.status === 'success') {
+                        if (data.status == 'success') {
                             alert('报名成功');
-                        } else if (data.status === 'fail') {
+                        } else {
                             alert('报名失败');
                         }
                     }
