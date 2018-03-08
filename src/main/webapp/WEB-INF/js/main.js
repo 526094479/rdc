@@ -74,18 +74,17 @@ $(function () {
         else
             $(".f_title").addClass('faguang');
      })
-var handler2 = function (captchaObj) {
-        $(".geetest_holder").hide();
+    var handler2 = function (captchaObj) {
+        //$(".geetest_holder").hide();
         $("#submit").click(function (e) {
-            var validate = captchaObj.getValidate();
             var mess = result();
-            if (!validate){
-                $(".geetest_holder").click();
-            	// alert('请先验证!');
-            }
-            else if(mess != true)
-            	alert(mess);  
+            if(mess != true)
+            	alert(mess); 
             else{
+                var validate = captchaObj.getValidate();
+                if(!validate)
+                $(".geetest_holder").click();
+                // alert('请先验证!');
                 $.ajax({
                     url: '/rdc/user/validate',
                     type: 'POST',

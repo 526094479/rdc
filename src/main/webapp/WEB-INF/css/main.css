@@ -525,6 +525,9 @@ select{
     -webkit-transition: border-color 0.4s, color 0.4s;
     transition: border-color 0.4s, color 0.4s;
 }
+.geetest_holder{
+	display: none;
+}
 /*动画*/
 .slideOut{
 	animation: out 1s;
