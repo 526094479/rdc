@@ -7,7 +7,8 @@ $(function () {
 	// });
 	$('.group').click(function(){
 		var that = this;
-		if(!$('.chosen:eq(0)').is(this)){
+		if(!$('.chosen:eq(0)').is(this) && $('.slideIn').length){
+            console.log($('.slideIn').length);
 			//$('.chosen:eq(0)').animate({top:"0px"},1000);
 			$('.chosen:eq(0)').removeClass("chosen");
 			$(this).addClass("chosen");
@@ -44,25 +45,36 @@ $(function () {
   */
 
 	 /**下拉组别菜单 */
-	 $(".down").on('click',()=>{
-		 $("#select_menu").slideToggle();
-	 })
-	 $(".select_item").on('click',function(){
-		 let val = $(this).text();
-		 $("#selected").text(val);
-		$("#select_menu").slideToggle();
-	 })
+	$(".down").on('click',()=>{
+	 $("#select_menu").slideToggle();
+	})
 
-	 $(".sex_choic").on('click',function(){
-		if($(".sex").text()=='男'){
-			  $(".sex").text("女");
-			$(".sex_val").attr('value','女');
-		}
-		else {
-			$(".sex").text("男");
-			$(".sex_val").attr('value','男');
-		}
-	 })
+	$(".select_item").on('click',function(){
+	 let val = $(this).text();
+	 $("#selected").text(val);
+	$("#select_menu").slideToggle();
+	})
+
+	$(".sex_choic").on('click',function(){
+	if($(".sex").text()=='男'){
+		  $(".sex").text("女");
+		$(".sex_val").attr('value','女');
+	}
+	else {
+		$(".sex").text("男");
+		$(".sex_val").attr('value','男');
+	}
+	})
+
+    $(".f_title").on('click',()=>{
+        $("#form_main").slideToggle();
+        if($(".f_title").hasClass('faguang')){
+            $(".f_title").removeClass('faguang');
+            $("[href='#form']").click();
+        }
+        else
+            $(".f_title").addClass('faguang');
+     })
 var handler2 = function (captchaObj) {
         $("#submit").click(function (e) {
             var validate = captchaObj.getValidate();
@@ -77,19 +89,19 @@ var handler2 = function (captchaObj) {
                     type: 'POST',
                     dataType: 'json',
                     data: {
-                        name: $('.input:eq(0)').val(),
-                        number: $('.input:eq(1)').val(),
-                        sex: $('.input:eq(2)').val(),
-                        majorAndClass: $('.input:eq(3)').val(),
-                        duties: $('.input:eq(4)').val(),
-                        phone: $('.input:eq(5)').val(),
-                        shortNumber: $('.input:eq(6)').val(),
-                        email: $('.input:eq(7)').val(),
-                        QQ: $('.input:eq(8)').val(),
-                        organize: $('.input2:eq(1)').val(),
-                        speciality: $('.input2:eq(0)').val(),
-                        introduce: $('.input3:eq(0)').val(),
-                        purpose: $('.input:eq(9)').val(),
+                        name: $("input[name='name']").val(),
+                        number: $("input[name='number']").val(),
+                        sex: $("input[name='sex']").val(),
+                        majorAndClass: $("input[name='majorAndClass']").val(),
+                        duties: $("input[name='duties']").val(),
+                        phone: $("input[name='phone']").val(),
+                        shortNumber: $("input[name='shortNumber']").val(),
+                        email: $("input[name='email']").val(),
+                        QQ: $("input[name='QQ']").val(),
+                        organize: $("#selected").val(),
+                        speciality: $("input[name='speciality']").val(),
+                        introduce: $("textarea[name='introduce']").val(),
+                        purpose: $("textarea[name='name']").val(),
                         challenge: result.geetest_challenge,
                         validate: result.geetest_validate,
                         seccode: result.geetest_seccode

@@ -20,8 +20,8 @@
 </div>
 <div class="container">
 	<!--大标题 begin-->
-    <div class="clrfix" id='top'>
-		<div class="logo clrfix">
+     <div class="clrfix" id='top'>
+<!--		<div class="logo clrfix">
 			<div class="logo1 col-md-3 ">
 				<img src="..\img\logo2.png">
 			</div>
@@ -33,6 +33,9 @@
 		<div class="infor clrfix">
 			<div class="text1 col-md-3"><span>2018</span></br><span>正在</br>招新</span></div>
 			<div class="text2 col-md-9">宣讲会时间：2018/3/12 19.30</br>宣讲会地点：工一阶梯教室</br>招新笔试时间：2018/3/12 19.30</br>招新Q群：555555555</div>
+		</div> -->
+		<div class="logoo">
+			<img src="..\img\I.png">
 		</div>
 	</div>
 	<!--大标题 end-->
@@ -143,71 +146,73 @@
 
 	<!--报名表 begin-->
 	<div id='form'>
-		<div class="f_title">加入我们！</div>
-		<div class="form_item1">
-			<label>名字</label>
-			<em class="important">*</em>
-			<input type="text" name="name" class="input" >
+		<div class="f_title faguang">加入我们！</div>
+		<div id="form_main" style="display: none;">
+			<div class="form_item1">
+				<label>名字</label>
+				<em class="important">*</em>
+				<input type="text" name="name" class="input" >
+			</div>
+			<div class="form_item1">
+				<label>学号</label>
+				<em class="important">*</em>
+				<input type="text" name="number" class="input">
+			</div>
+			<div class="form_item1 sex_choic">
+				<label>性别</label>
+				<em class="important">*</em>
+				<span class="sex">男</span>
+        	    <input type="hidden" name="sex" class="input sex_val"  value="男">
+			</div>
+			<div class="form_item2">
+				<label>学院专业班级</label>
+				<em class="important">*</em>
+        	    <input type="text" name="majorAndClass" class="input">
+			</div>
+			<div class="form_item1">
+				<label>职务</label>
+        	    <input type="text" name="duties" class="input">
+			</div>
+			<div class="form_item2">
+				<label>手机号码</label>
+				<em class="important">*</em>
+        	    <input type="text" name="phone" class="input">
+			</div>
+			<div class="form_item1">
+				<label>短号</label>
+        	    <input type="text" name="shortNumber" class="input">
+			</div>
+			<div class="form_item2">
+				<label>邮箱</label>
+        	    <input type="text" name="email" class="input">
+			</div>
+			<div class="form_item1">
+				<label>QQ</label>
+				<em class="important">*</em>
+        	    <input type="text" name="QQ" class="input">
+			</div>
+			<div class="form_item3">
+				<label>特长</label>
+        	    <input type="text" name="speciality" class="input">
+			</div>
+			<div class="form_item3 down"><span id="selected">Web前端</span><i class="fa fa-chevron-down down_icon"></i></div>
+			<ul id="select_menu">
+				<li class="select_item">Web前端</li>
+				<li class="select_item">Java后台开发</li>
+				<li class="select_item">Android 移动开发</li>
+				<li class="select_item">大数据</li>
+			</ul>
+			<div class="form_item4">
+				<label>自我简介（计算机类技能、经验或自我评价</label>
+				<em class="important">*</em>
+        	    <textarea type="text" name="introduce" class="text" placeholder="在这里输入哦"></textarea>
+			</div>
+			<div class="form_item5">
+				<label>加入本团队的目的及期望</label>
+        	    <textarea type="text" name="purpos" class="text" placeholder="在这里输入哦"></textarea>
+			</div>
+			<div class="button"><button class="joinUs faguang" id="submit">立即报名</button></a></div>
 		</div>
-		<div class="form_item1">
-			<label>学号</label>
-			<em class="important">*</em>
-			<input type="text" name="number" class="input">
-		</div>
-		<div class="form_item1 sex_choic">
-			<label>性别</label>
-			<em class="important">*</em>
-			<span class="sex">男</span>
-            <input type="hidden" name="sex" class="input sex_val"  value="男">
-		</div>
-		<div class="form_item2">
-			<label>学院专业班级</label>
-			<em class="important">*</em>
-            <input type="text" name="majorAndClass" class="input">
-		</div>
-		<div class="form_item1">
-			<label>职务</label>
-            <input type="text" name="duties" class="input">
-		</div>
-		<div class="form_item2">
-			<label>手机号码</label>
-			<em class="important">*</em>
-            <input type="text" name="phone" class="input">
-		</div>
-		<div class="form_item1">
-			<label>短号</label>
-            <input type="text" name="shortNumber" class="input">
-		</div>
-		<div class="form_item2">
-			<label>邮箱</label>
-            <input type="text" name="email" class="input">
-		</div>
-		<div class="form_item1">
-			<label>QQ</label>
-			<em class="important">*</em>
-            <input type="text" name="QQ" class="input">
-		</div>
-		<div class="form_item3">
-			<label>特长</label>
-            <input type="text" name="speciality" class="input">
-		</div>
-		<div class="form_item3 down"><span id="selected">Web前端</span><i class="fa fa-chevron-down down_icon"></i></div>
-		<ul id="select_menu">
-			<li class="select_item">Web前端</li>
-			<li class="select_item">Java后台开发</li>
-			<li class="select_item">Android 移动开发</li>
-			<li class="select_item">大数据</li>
-		</ul>
-		<div class="form_item4">
-			<label>自我简介（计算机类技能、经验或自我评价</label>
-			<em class="important">*</em>
-            <textarea type="text" name="introduce" class="text" placeholder="在这里输入哦"></textarea>
-		</div>
-		<div class="form_item5">
-			<label>加入本团队的目的及期望</label>
-            <textarea type="text" name="purpos" class="text" placeholder="在这里输入哦"></textarea>
-		</div>
-		<div class="button"><button class="joinUs" id="submit">立即报名</button></a></div>
 	</div>
 	<!--报名表 end-->
 </div>

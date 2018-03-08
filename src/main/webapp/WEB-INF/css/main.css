@@ -46,7 +46,7 @@ a:link,a:hover,a:visited,a:active{
 	font-size: 20px;
 }*/
 
-.logo{
+/*.logo{
 	width: 100%;
 	padding-top: 110px;
 	padding-left: 56px;
@@ -93,6 +93,10 @@ img{
 	text-align: left;
 	line-height: 1.5em;
     vertical-align: middle;
+}*/
+img{
+	margin-top: 100px;
+	width: 100%;
 }
 /*.logo>img:first-child {
 	display: block;
@@ -508,9 +512,11 @@ select{
     border: 3px solid #fff;
     color: #fff;
     background-color: rgba(0,0,0,0.9);
-    cursor: pointer;
     outline: none;
-    -webkit-animation: pulsate 0.8s infinite ease-in-out alternate;
+}
+.faguang{
+	cursor: pointer;
+	-webkit-animation: pulsate 0.8s infinite ease-in-out alternate;
     -moz-animation: pulsate 0.8s infinite ease-in-out alternate;
     -o-animation: pulsate 0.8s infinite ease-in-out alternate;
     animation: pulsate 0.8s infinite ease-in-out alternate;
@@ -720,4 +726,28 @@ to {
 }
 .clear{
 	clear: both;
+}
+
+/*照片自适应*/
+@media screen and (max-width: 992px) {
+.about_contain{
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+.about_title{
+	    width: 100%;
+    margin: 50px 0 30px 0;
+    color: #a1c4f2;
+    font-size: 35px;
+}
+.about_text_wrapper{
+	padding: 16px 70px;
+}
+.about_slider{
+	float: none;
+	margin: 0 auto;
+	width: 90%;
+}
 }
