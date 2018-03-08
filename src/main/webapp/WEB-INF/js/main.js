@@ -76,7 +76,7 @@ $(function () {
      })
     var handler2 = function (captchaObj) {
         //$(".geetest_holder").hide();
-        $("#submit").click(function () {
+        $("#submit").click(function (captchaObj) {
             var validate = captchaObj.getValidate();
             var mess = result();
             if(mess != true)
