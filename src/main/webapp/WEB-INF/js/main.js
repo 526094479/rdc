@@ -76,8 +76,8 @@ $(function () {
      })
     var handler2 = function (captchaObj) {
         //$(".geetest_holder").hide();
-        var validate = captchaObj.getValidate();
-        $("#submit").click(function (e) {
+        $("#submit").click(function () {
+            var validate = captchaObj.getValidate();
             var mess = result();
             if(mess != true)
             	alert(mess); 
@@ -117,7 +117,6 @@ $(function () {
                     }
                 })
             }
-            e.preventDefault();
         });
         // 将验证码加到id为form的元素里，同时会有三个input的值用于表单提交
         captchaObj.appendTo("#form");
