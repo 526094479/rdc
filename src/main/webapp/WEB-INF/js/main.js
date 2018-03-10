@@ -18,7 +18,11 @@ $(function () {
 		}
 	});	
 
-
+	//window.sr = ScrollReveal();
+     sr.reveal('.about_text_wrapper', { duration: 800 ,reset: true });
+	 sr.reveal('.slides', { duration: 800, reset: true  });
+	 sr.reveal('.introdution_f', { duration: 800 });
+	 sr.reveal('#form', { duration: 800 ,reset: true });
 	//$('.group :first').click();
 	// 在html里直接给前端加上chosen的class类，这样每次加载时不用等一秒才动
 

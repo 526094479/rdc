@@ -264,21 +264,21 @@ img{
     color: #a1c4f2;
 }
 .about_slider{
-   width: 44%;
+   width: 45%;
    height: 440px;
    float: right;
-   margin-top: 28px;
+   margin-top: 50px;
 }
 .slider_img{
-	background-color: rgba(139, 151, 232, 0.1);
-    margin-bottom: 10px;
-    padding: 15px;
     border-radius: 10px;
-   
+    margin-top: 0px !important;
+}
+.navs-wrapper{
+	border-radius: 10px;
 }
 .about_text_wrapper{
 	padding: 16px 20px;
-	background-color:rgba(139, 151, 232, 0.1);
+	background-color:rgba(182, 174, 56, 0.1);
 }
 
 
@@ -356,6 +356,7 @@ a:focus{
 	color: #9cbeeb ;
 	text-align: center !important;
 	line-height: 44px;
+	cursor: pointer;
 }
 .form_item1{
 	width: 21%;
