@@ -71,7 +71,7 @@ $(function () {
         $("#submit").click(function (captchaObj) {
             var mess = result();
             if(mess != true)
-            	alert(mess); 
+            	Alert(mess); 
             else{
                 if(!validate)
                 $(".geetest_holder").click();
@@ -138,6 +138,9 @@ $(function () {
             }, handler2);
         }
     });
+    $("#tipBox_subbmit").click(function () {AlertClose(); });
+    $(".mask").click(function () {AlertClose(); });
+    $("#submit").click(function () {Alert(); });
 })
 
 //前端验证
@@ -157,4 +160,21 @@ function result(){
 	if(!/^[^ ]+$/.test($("textarea[name='introduce']").val()))
 		return '自我简介不能为空或不能有空格!';
 	return true;
+}
+
+//弹出框
+function Alert(mess){
+    $('.tipBox_main').html(mess);
+    $('#tipBox').css('display','block').addClass('bounceIn animated');
+    $('.mask').css('display','block');
+    setTimeout(function(){
+        $('#tipBox').removeClass('bounceIn animated');
+    }, 700);
+}
+function AlertClose(){
+    $('#tipBox').addClass('bounceOut animated');
+    $('.mask').css('display','none');
+    setTimeout(function(){
+        $('#tipBox').css('display','none').removeClass('bounceOut animated');
+    }, 700);
 }

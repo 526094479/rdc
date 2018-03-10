@@ -94,7 +94,7 @@ img{
 	line-height: 1.5em;
     vertical-align: middle;
 }*/
-img{
+.logo{
 	margin-top: 100px;
 	width: 100%;
 }
@@ -198,8 +198,8 @@ img{
 	margin: 0 auto;
 }
 .diff_img{
-    width:130px !important;
-	height:130px !important; 
+    width:120px !important;
+	height:120px !important; 
 }
 .ggroup img:last-child{
 	display: none;
@@ -290,7 +290,7 @@ img{
 	position: fixed;
     right: 0;
     top: 48%;
-    z-index: 1500;
+    z-index: 1039;
 }
 
 .m_item{
@@ -541,6 +541,61 @@ select{
 }
 .geetest_holder{
 	display: none;
+}
+/*弹出框*/
+#tipBox{
+	display: none;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    margin-left: -240px;
+    width: 90%;
+    max-width: 480px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    z-index: 1500;
+    /*opacity: 0;*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* margin: 0 20px; */
+
+}
+.tipBox_div{
+	font-size: 15px;
+	border-bottom: 1px #eee solid;
+	padding: 5px 20px;
+}
+.tipBox_div_btm{
+	border: none;
+}
+.tipBox_div h4{
+	font-weight: 600;
+}
+.tipBox_main{
+	padding: 15px 20px 20px!important;
+}
+.tipBox_div button{
+	float: right;
+	background-color: #337ab7;
+    border: 1px solid #2e6da4;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 6px 20px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+.mask{
+	    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 1040;
+    background-color: #000;
 }
 /*动画*/
 .slideOut{

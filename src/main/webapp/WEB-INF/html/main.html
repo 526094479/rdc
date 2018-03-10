@@ -23,12 +23,12 @@
 	<!--大标题 begin-->
      <div class="clrfix" id='top'>
 		<div class="logoo">
-			<img src="..\img\I.png">
+			<img class="logo" src="..\img\I.png">
 		</div>
 	</div>
 	<!--大标题 end-->
 	<!--各组介绍 begin-->
-		<div class="down-arrow floating-arrow"><a href="#outerdiv" class="js-scroll-trigger"><i class="fa fa-angle-down"></i></a></div>
+		<div class="down-arrow floating-arrow"><a href="#outerdiv" class="js-scroll-trigger"><img src='..\img\rocket.png'></img></a></div>
 		<nav id="mainNav"></nav>
 	<div id="outerdiv"> 
 		<div class="groups-box">
@@ -138,12 +138,12 @@
 			<div class="form_item1">
 				<label>名字</label>
 				<em class="important">*</em>
-				<input type="text" name="name" class="input" >
+				<input type="text" name="name" class="input" maxlength="20">
 			</div>
 			<div class="form_item1">
 				<label>学号</label>
 				<em class="important">*</em>
-				<input type="text" name="number" class="input">
+				<input type="text" name="number" class="input" maxlength="10">
 			</div>
 			<div class="form_item1 sex_choic">
 				<label>性别</label>
@@ -154,33 +154,33 @@
 			<div class="form_item2">
 				<label>学院专业班级</label>
 				<em class="important">*</em>
-        	    <input type="text" name="majorAndClass" class="input">
+        	    <input type="text" name="majorAndClass" class="input" maxlength="50">
 			</div>
 			<div class="form_item1">
 				<label>职务</label>
-        	    <input type="text" name="duties" class="input">
+        	    <input type="text" name="duties" class="input" maxlength="30">
 			</div>
 			<div class="form_item2">
 				<label>手机号码</label>
 				<em class="important">*</em>
-        	    <input type="text" name="phone" class="input">
+        	    <input type="text" name="phone" class="input" maxlength="11">
 			</div>
 			<div class="form_item1">
 				<label>短号</label>
-        	    <input type="text" name="shortNumber" class="input">
+        	    <input type="text" name="shortNumber" class="input" maxlength="30">
 			</div>
 			<div class="form_item2">
 				<label>邮箱</label>
-        	    <input type="text" name="email" class="input2">
+        	    <input type="text" name="email" class="input2" maxlength="50">
 			</div>
 			<div class="form_item1">
 				<label>QQ</label>
 				<em class="important">*</em>
-        	    <input type="text" name="QQ" class="input">
+        	    <input type="text" name="QQ" class="input" maxlength="15">
 			</div>
 			<div class="form_item3">
 				<label>特长</label>
-        	    <input type="text" name="speciality" class="input2">
+        	    <input type="text" name="speciality" class="input2" maxlength="100">
 			</div>
 			<div class="form_item3 down"><span id="selected">Web前端</span><i class="fa fa-chevron-down down_icon"></i></div>
 			<ul id="select_menu">
@@ -192,11 +192,11 @@
 			<div class="form_item4">
 				<label>自我简介（计算机类技能、经验或自我评价</label>
 				<em class="important">*</em>
-        	    <textarea type="text" name="introduce" class="text" placeholder="在这里输入哦"></textarea>
+        	    <textarea type="text" name="introduce" class="text" placeholder="在这里输入哦" maxlength="500"></textarea>
 			</div>
 			<div class="form_item5">
 				<label>加入本团队的目的及期望</label>
-        	    <textarea type="text" name="purpos" class="text" placeholder="在这里输入哦"></textarea>
+        	    <textarea type="text" name="purpos" class="text" placeholder="在这里输入哦" maxlength="300"></textarea>
 			</div>
 			<div class="button"><button class="joinUs faguang" id="submit">立即报名</button></a></div>
 		</div>
@@ -229,6 +229,13 @@
 </div>
 <!--侧边菜单 end-->
 
+<!-- 弹出框 -->
+<div id="tipBox">
+	<div class="tipBox_div"><h4>消息</h4></div>
+	<div class="tipBox_main tipBox_div"></div>
+	<div class="tipBox_div tipBox_div_btm"><button id="tipBox_subbmit">确认</button><div class="clrfix"></div></div>
+</div>
+<div class="mask"></div>
 <script src="..\js\jquery-1.11.3.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

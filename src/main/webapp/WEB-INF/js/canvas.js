@@ -1,7 +1,7 @@
 	var WINDOW_WIDTH = document.body.offsetWidth;
 	var WINDOW_HEIGHT = document.body.offsetHeight;
 	var canvas,context;
-	var num = 100;
+	var num = 250;
 	var stars = [];
 	var mouseX = WINDOW_WIDTH/2;
 	var mouseY = WINDOW_HEIGHT/2;
@@ -48,7 +48,8 @@
 		});
 
 	function render(){
-		context.fillStyle = 'rgba(0,0,0,0.3)';
+		//context.fillStyle = 'rgba(4,21,39,0.3)';
+		context.fillStyle = 'rgba(22,32,50,0.3)';
 		context.fillRect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
 		// context.clearRect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT)
 		for(var i =0; i<num ; i++){
