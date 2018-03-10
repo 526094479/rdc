@@ -8,7 +8,7 @@ $(function () {
 	$('.group').click(function(){
 		var that = this;
 		if(!$('.chosen:eq(0)').is(this) && $('.slideIn').length){
-            console.log($('.slideIn').length);
+           // console.log($('.slideIn').length);
 			//$('.chosen:eq(0)').animate({top:"0px"},1000);
 			$('.chosen:eq(0)').removeClass("chosen");
 			$(this).addClass("chosen");
@@ -30,22 +30,9 @@ $(function () {
 
     
    /***菜单 */
-   /*
-	$(window).scroll(()=>{ 
-		let t = document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop,
-			m_in = $("#outerdiv"),
-			m_ab = $("#about"),
-			m_fo = $("#form"),
-			in_t = m_in.offset().top,
-			ab_t = m_ab.offset().top,
-			fo_t = m_fo.offset().top;
-			
-		    if(t<in_t-100)   $(".m_item").css("right","-100px");
-			if(t>=in_t-100)  $(".m_in").css("right","-20px").siblings().css("right","-100px"); 
-			if(t>=ab_t-100)  $(".m_ab").css("right","-20px").siblings().css("right","-100px");
-			if(t>fo_t-200)   $(".m_fo").css("right","-20px").siblings().css("right","-100px");	
-	 })
-  */
+   
+
+   
 
 	 /**下拉组别菜单 */
 	$(".down").on('click',()=>{

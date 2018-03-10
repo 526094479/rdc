@@ -479,7 +479,17 @@ label{
 }
 .input{
 	height: 45px;
-	width: 60%;
+	width: 70%;
+	background: rgba(30,30,30,.10);
+	outline: none;
+	color: #fff;
+	border-radius: 2px;
+	padding: 10px 14px;
+
+}
+.input2{
+	height: 45px;
+	width: 90%;
 	background: rgba(30,30,30,.10);
 	outline: none;
 	color: #fff;
