@@ -197,7 +197,10 @@ img{
 	display: block;
 	margin: 0 auto;
 }
-
+.diff_img{
+    width:130px !important;
+	height:130px !important; 
+}
 .ggroup img:last-child{
 	display: none;
 }
@@ -479,7 +482,7 @@ label{
 }
 .input{
 	height: 45px;
-	width: 70%;
+	width: 60%;
 	background: rgba(30,30,30,.10);
 	outline: none;
 	color: #fff;
