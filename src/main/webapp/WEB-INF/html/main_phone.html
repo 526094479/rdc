@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>2018研发招新官网</title>
 <link rel="icon" href="../img/icon.png" type="img/x-ico" />
 <link rel="stylesheet" type="text/css" href="..\css\animate.css">
 <link rel="stylesheet" type="text/css" href="..\css\font-awesome.css">
-<link rel="stylesheet" type="text/css" href="..\css\main.css">
+<link rel="stylesheet" type="text/css" href="..\css\main_phone.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!-- <link href="..css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
 <!-- MA5 Slider -->
@@ -16,8 +17,6 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-<img src="..\img\planet.png" class='planet'>
-<img src="..\img\ship.png" class='ship'>
 <div class="canvas-box">
 	<canvas id="canvas">你的浏览器不支持canvas</canvas>
 </div>
@@ -30,15 +29,15 @@
 	</div>
 	<!--大标题 end-->
 	<!--各组介绍 begin-->
-		<div class="down-arrow floating-arrow"><a href="#outerdiv" class="js-scroll-trigger"><img src='..\img\rocket.png'></img></a></div>
+		<div class="down-arrow floating-arrow"><a href="#outerdiv" class="js-scroll-trigger"><img class='rocket' src='..\img\rocket.png'></img></a></div>
 		<nav id="mainNav"></nav>
 	<div id="outerdiv"> 
 		<div class="groups-box">
 			<div class="groups">
 				<div class="group" groupid='0'>
 					<div class="font_end_ggroup ggroup chosen">
-						<img src="..\img\web.png">
-						<img src="..\img\web2.png" class="text-primary mb-3 sr-icons">
+						<img class='ggroup_img' src="..\img\web.png">
+						<img src="..\img\web2.png" class="text-primary mb-3 sr-icons ggroup_img">
 					</div>
 					<span>web前端开发</span>
 				</div>
@@ -51,15 +50,15 @@
 				</div>
 				<div class="group" groupid='2'>
 					<div class="android_ggroup ggroup">
-						<img src="..\img\android.png" class="text-primary mb-3 sr-icons">
-						<img src="..\img\android2.png">
+						<img src="..\img\android.png" class="text-primary mb-3 sr-icons ggroup_img">
+						<img class='ggroup_img' src="..\img\android2.png">
 					</div>
 					<span>Android移动开发</span>
 				</div>
 				<div class="group" groupid='3'>
 					<div class="big_data_ggroup ggroup">
-						<img src="..\img\big_data.png" class="text-primary mb-3 sr-icons">
-						<img src="..\img\big_data2.png">
+						<img src="..\img\big_data.png" class="text-primary mb-3 sr-icons ggroup_img">
+						<img class='ggroup_img' src="..\img\big_data2.png">
 					</div>
 					<span>大数据</span>
 				</div>
@@ -132,7 +131,7 @@
 		</div>
 	</div>
 	<!--关于研发 end-->
-
+</div>
 	<!--报名表 begin-->
 	<div id='form'>
 		<div class="f_title faguang">加入我们！<i class="fa fa-hand-pointer-o" style="padding-left:16px"></i></div>
@@ -153,50 +152,57 @@
 				<span class="sex">男</span>
         	    <input type="hidden" name="sex" class="input sex_val"  value="男">
 			</div>
-			<div class="form_item2">
-				<label>学院专业班级</label>
+			<div class="form_item1 group_choic">
+				<label>选择组别</label>
 				<em class="important">*</em>
-        	    <input type="text" name="majorAndClass" class="input" maxlength="50">
+				<span class="groupchoic">Web前端</span>
+        	    <input type="hidden" name="group_val" class="input group_val"  value="Web前端">
 			</div>
+<!-- 			<div class="form_item1 down"><span id="selected">Web前端</span><i class="fa fa-chevron-down down_icon"></i></div>
+			<ul id="select_menu">
+				<li class="select_item">Web前端</li>
+				<li class="select_item">Java后台开发</li>
+				<li class="select_item">Android 移动开发</li>
+				<li class="select_item">大数据</li>
+			</ul> -->
 			<div class="form_item1">
-				<label>职务</label>
+				<label>职务&nbsp;</label>
         	    <input type="text" name="duties" class="input" maxlength="30">
 			</div>
-			<div class="form_item2">
-				<label>手机号码</label>
-				<em class="important">*</em>
-        	    <input type="text" name="phone" class="input" maxlength="11">
-			</div>
+
 			<div class="form_item1">
-				<label>短号</label>
-        	    <input type="text" name="shortNumber" class="input" maxlength="30">
-			</div>
-			<div class="form_item2">
-				<label>邮箱</label>
-        	    <input type="text" name="email" class="input2" maxlength="50">
+				<label>短号&nbsp;</label>
+        	    <input type="text" name="shortNumber" class="input" maxlength="30" >
 			</div>
 			<div class="form_item1">
 				<label>QQ</label>
 				<em class="important">*</em>
         	    <input type="text" name="QQ" class="input" maxlength="15">
 			</div>
-			<div class="form_item3">
-				<label>特长</label>
-        	    <input type="text" name="speciality" class="input2" maxlength="100">
+			<div class="form_item1">
+				<label>特长&nbsp;</label>
+        	    <input type="text" name="speciality" class="input" maxlength="100">
 			</div>
-			<div class="form_item3 down"><span id="selected">Web前端</span><i class="fa fa-chevron-down down_icon"></i></div>
-			<ul id="select_menu">
-				<li class="select_item">Web前端</li>
-				<li class="select_item">Java后台开发</li>
-				<li class="select_item">Android 移动开发</li>
-				<li class="select_item">大数据</li>
-			</ul>
-			<div class="form_item4">
+			<div class="form_item3">
+				<label>学院专业班级</label>
+				<em class="important">*</em>
+        	    <input type="text" name="majorAndClass" class="input2" maxlength="50">
+			</div>
+			<div class="form_item3">
+				<label>手机号码</label>
+				<em class="important">*</em>
+        	    <input type="text" name="phone" class="input3" maxlength="11">
+			</div>
+			<div class="form_item3">
+				<label>邮箱&nbsp;&nbsp;</label>
+        	    <input type="text" name="email" class="input3" maxlength="50">
+			</div>
+			<div class="form_item2">
 				<label>自我简介（计算机类技能、经验或自我评价</label>
 				<em class="important">*</em>
         	    <textarea type="text" name="introduce" class="text" placeholder="在这里输入哦" maxlength="500"></textarea>
 			</div>
-			<div class="form_item5">
+			<div class="form_item2">
 				<label>加入本团队的目的及期望</label>
         	    <textarea type="text" name="purpos" class="text" placeholder="在这里输入哦" maxlength="300"></textarea>
 			</div>
@@ -204,10 +210,10 @@
 		</div>
 	</div>
 	<!--报名表 end-->
-</div>
+
 
 <!--侧边菜单-->
-<div class="menu">
+<!-- <div class="menu">
 	<div class="m_in m_item">
 		<a href="#outerdiv" class="js-scroll-trigger">
 		    <i class="fa fa-bars m_icon i_in"></i>小组介绍
@@ -228,7 +234,7 @@
 		<i class="fa fa-arrow-up m_icon i_top"></i>回到顶部
 		</a>
 	</div>
-</div>
+</div> -->
 <!--侧边菜单 end-->
 
 <!-- 弹出框 -->
@@ -238,12 +244,13 @@
 	<div class="tipBox_div tipBox_div_btm"><button id="tipBox_subbmit">确认</button><div class="clrfix"></div></div>
 </div>
 <div class="mask"></div>
+<a href="#form" class="js-scroll-trigger" style=""></a>
 <script src="..\js\jquery-1.11.3.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="..\js\canvas.js"></script>
 <script src="../js/scrollreveal.min.js"></script>
-<script src="..\js\main.js"></script>
+<script src="..\js\main_phone.js"></script>
 <!-- 滚动 -->
 <!-- <script src="..\vendor\jquery\jquery.min.js"></script> -->
 <script src="../js/jquery.easing.min.js"></script>

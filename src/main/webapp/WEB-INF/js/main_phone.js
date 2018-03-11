@@ -46,15 +46,34 @@ $(function () {
 	})
 
 	$(".sex_choic").on('click',function(){
-	if($(".sex").text()=='男'){
-		  $(".sex").text("女");
-		$(".sex_val").attr('value','女');
-	}
-	else {
-		$(".sex").text("男");
-		$(".sex_val").attr('value','男');
-	}
+	   if($(".sex").text()=='男'){
+	       $(".sex").text("女");
+	       $(".sex_val").attr('value','女');
+	   }
+	   else {
+	       $(".sex").text("男");
+	       $(".sex_val").attr('value','男');
+	   }
 	})
+
+    $(".group_choic").on('click',function(){
+        if($(".groupchoic").text()=='Web前端'){
+            $(".groupchoic").text("Java后台");
+            $(".group_val").attr('value','Java后台');
+        }
+        else if($(".groupchoic").text()=='Java后台'){
+            $(".groupchoic").text("Android");
+            $(".group_val").attr('value','Android');
+        }
+        else if($(".groupchoic").text()=='Android'){
+            $(".groupchoic").text("大数据");
+            $(".group_val").attr('value','大数据');
+        }
+        else{
+            $(".groupchoic").text("Web前端");
+            $(".group_val").attr('value','Web前端');
+        }
+    })
 
     $(".f_title").on('click',()=>{
         $("#form_main").slideToggle();
@@ -65,11 +84,6 @@ $(function () {
         else
             $(".f_title").addClass('faguang');
      })
-
-    $("a").on('click', function(event){
-        console.log('1');
-        setTimeout(event.preventDefault(),400);
-    })
     var handler2 = function (captchaObj) {
         //$(".geetest_holder").hide();
         const validate = captchaObj.getValidate();
@@ -169,7 +183,7 @@ function result(){
 
 //弹出框
 function Alert(mess){
-    $('.tipBox_main').html(mess);
+    $('.tipBox_main').html("圣诞节快乐风刀霜剑联发科的顺口溜");
     $('#tipBox').css('display','block').addClass('bounceIn animated');
     $('.mask').css('display','block');
     setTimeout(function(){
