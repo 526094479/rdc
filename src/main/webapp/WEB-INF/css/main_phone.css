@@ -246,7 +246,7 @@ img{
 .title{
 	width: 100%;
 	margin: 50px 0 30px 0;
-	color: #a1c4f2;
+	color: #68beff;
 	font-size: 35px;
 }
 .introdution_main{
@@ -278,7 +278,7 @@ img{
 .about_title{
 	width: 100%;
     margin: 50px 0 30px 0;
-    color: #a1c4f2;
+    color: #68beff;
     font-size: 35px;
 }
 .about_text_wrapper{
@@ -369,7 +369,7 @@ a:focus{
     border-radius: 30px;
     background: rgba(30,30,30,.10);
     font-size: 2rem;
-    color: #9cbeeb;
+    color: #68beff;
     text-align: center !important;
     line-height: 4rem;
     cursor: pointer;
@@ -478,7 +478,7 @@ a:focus{
 	color: rgb(15, 15, 15);
 }
 label{
-    color: #cdcfd0;
+    color: #666666;
     font-size: 1.5rem;
     font-weight: 400 !important;
     padding-left: 1rem;
@@ -600,11 +600,11 @@ select{
 #tipBox{
     display: none;
     position: fixed;
-    left: 20%;
+    left: 12%;
     top: 20%;
     /* margin-left: -240px; */
     /*width: 90%;*/
-    right: 20%;
+    right: 12%;
     max-width: 48rem;
     background-color: #FFFFFF;
     border-radius: 5px;

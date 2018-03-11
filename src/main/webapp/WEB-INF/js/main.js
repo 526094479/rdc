@@ -1,18 +1,10 @@
 $(function () {
-	// $('.group').mouseenter(function(){
-	// 	clearTimeout(a);
-	// 	var that = this;
-	// 	$(that).addClass("bounce animated");
-	// 	var a =  setTimeout(function(){$(that).removeClass("bounce animated");}, 1000);
-	// });
+
 	$('.group').click(function(){
 		var that = this;
 		if(!$('.chosen:eq(0)').is(this) && $('.slideIn').length){
-           // console.log($('.slideIn').length);
-			//$('.chosen:eq(0)').animate({top:"0px"},1000);
 			$('.chosen:eq(0)').removeClass("chosen");
 			$(this).addClass("chosen");
-			//$(this).animate({top:"100px"},1000);
 			$('.slideIn:eq(0)').removeClass("slideIn").addClass("slideOut");
 			setTimeout(function(){$('.slideOut:eq(0)').css("display", "none").removeClass("slideOut");$('.introdution:eq('+$(that).attr("groupid")+')').css("display", "block").addClass("slideIn")},1000);
 		}
@@ -23,26 +15,20 @@ $(function () {
 	 sr.reveal('.slides', { duration: 800, reset: true  });
 	 sr.reveal('.introdution_f', { duration: 800 });
 	 sr.reveal('#form', { duration: 800 ,reset: true });
-	//$('.group :first').click();
-	// 在html里直接给前端加上chosen的class类，这样每次加载时不用等一秒才动
+	
 
 	$('.ma5slider').ma5slider();
 
-    
-   /***菜单 */
-   
-
-   
 
 	 /**下拉组别菜单 */
 	$(".down").on('click',()=>{
-	 $("#select_menu").slideToggle();
+	 $("#select_menu").slideToggle(200);
 	})
 
 	$(".select_item").on('click',function(){
 	 let val = $(this).text();
 	 $("#selected").text(val);
-	$("#select_menu").slideToggle();
+	$("#select_menu").slideToggle(200);
 	})
 
 	$(".sex_choic").on('click',function(){
@@ -67,11 +53,9 @@ $(function () {
      })
 
     $("a").on('click', function(event){
-        console.log('1');
         setTimeout(event.preventDefault(),400);
     })
     var handler2 = function (captchaObj) {
-        //$(".geetest_holder").hide();
         const validate = captchaObj.getValidate();
         $("#submit").click(function (captchaObj) {
             var mess = result();
@@ -80,12 +64,10 @@ $(function () {
             else{
                 if(!validate)
                 $(".geetest_holder").click();
-                // alert('请先验证!');
                 captchaObj.onSuccess(function(){
                     $.ajax({
                         url: '/rdc/user/validate',
                         type: 'POST',
-                        //dataType: 'json',
                         data: {
                             name: $("input[name='name']").val(),
                             number: $("input[name='number']").val(),
