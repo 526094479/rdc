@@ -81,47 +81,47 @@ $(function () {
      })
     var handler2 = function (captchaObj) {
         const validate = captchaObj.getValidate();
-        $("#submit").click(function (captchaObj) {
+        captchaObj.onSuccess(function(){
+            $.ajax({
+                url: '/rdc/user/validate',
+                type: 'POST',
+                //dataType: 'json',
+                data: {
+                    name: $("input[name='name']").val(),
+                    number: $("input[name='number']").val(),
+                    sex: $("input[name='sex']").val(),
+                    majorAndClass: $("input[name='majorAndClass']").val(),
+                    duties: $("input[name='duties']").val(),
+                    phone: $("input[name='phone']").val(),
+                    shortNumber: $("input[name='shortNumber']").val(),
+                    email: $("input[name='email']").val(),
+                    QQ: $("input[name='QQ']").val(),
+                    organize: $("#selected").html(),
+                    speciality: $("input[name='speciality']").val(),
+                    introduce: $("textarea[name='introduce']").val(),
+                    purpose: $("textarea[name='name']").val(),
+                    challenge: validate.geetest_challenge,
+                    validate: validate.geetest_validate,
+                    seccode: validate.geetest_seccode
+                },
+                success: function (data) {
+                    data = $.parseJSON(data);
+                    if (data.result == 'success') {
+                        alert('报名成功');
+                        validate.reset();
+                    } else {
+                        alert('报名失败');
+                    }
+                }
+            })
+        })
+        $("#submit").click(function () {
             var mess = result();
             if(mess != true)
             	Alert(mess); 
             else{
                 if(!validate)
                 $(".geetest_holder").click();
-                captchaObj.onSuccess(function(){
-                    $.ajax({
-                        url: '/rdc/user/validate',
-                        type: 'POST',
-                        //dataType: 'json',
-                        data: {
-                            name: $("input[name='name']").val(),
-                            number: $("input[name='number']").val(),
-                            sex: $("input[name='sex']").val(),
-                            majorAndClass: $("input[name='majorAndClass']").val(),
-                            duties: $("input[name='duties']").val(),
-                            phone: $("input[name='phone']").val(),
-                            shortNumber: $("input[name='shortNumber']").val(),
-                            email: $("input[name='email']").val(),
-                            QQ: $("input[name='QQ']").val(),
-                            organize: $("#selected").html(),
-                            speciality: $("input[name='speciality']").val(),
-                            introduce: $("textarea[name='introduce']").val(),
-                            purpose: $("textarea[name='name']").val(),
-                            challenge: validate.geetest_challenge,
-                            validate: validate.geetest_validate,
-                            seccode: validate.geetest_seccode
-                        },
-                        success: function (data) {
-                            data = $.parseJSON(data);
-                            if (data.result == 'success') {
-                                alert('报名成功');
-                                validate.reset();
-                            } else {
-                                alert('报名失败');
-                            }
-                        }
-                    })
-                })
             }
         });
         // 将验证码加到id为form的元素里，同时会有三个input的值用于表单提交
