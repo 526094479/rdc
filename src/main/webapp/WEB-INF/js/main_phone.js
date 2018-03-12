@@ -108,7 +108,7 @@ $(function () {
                     data = $.parseJSON(data);
                     if (data.result == 'success') {
                         alert('报名成功');
-                        validate.reset();
+                        captchaObj.reset();
                     } else {
                         alert('报名失败');
                     }
@@ -150,17 +150,18 @@ $(function () {
             }, handler2);
         }
     });
-    $("#tipBox_subbmit").click(function () {AlertClose(); });
-    $(".mask").click(function () {AlertClose(); });
-    $("#submit").click(function () {Alert(); });
+    $("#tipBox_subbmit").on('click',function () {AlertClose(); });
+    $(".mask").on('click',function () {AlertClose(); });
 })
 
 //前端验证
 function result(){
 	if(!/^[^ ]+$/.test($("input[name='name']").val()))
 		return '名字不能为空或不能有空格!';
-	if(!/^\d{10}$/.test($("input[name='number']").val()))
-		return '请填写正确的学号!';
+    if(/^3[1,2]1[1,2,3,4,5]\d{6}$/.test($("input[name='number']").val()))
+        return '仅限大一同学报名!'
+    if(!/^3[1,2]1[6,7]\d{6}$/.test($("input[name='number']").val()))
+        return '请填写正确的学号!';
 	if(!/^[^ ]+$/.test($("input[name='majorAndClass']").val()))
 		return '学院专业班级不能为空或不能有空格!';
 	if(!/^1[3,4,5,7,8]\d{9}$/.test($("input[name='phone']").val()))
