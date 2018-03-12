@@ -1,7 +1,9 @@
 	var WINDOW_WIDTH = document.body.offsetWidth;
 	var WINDOW_HEIGHT = document.body.offsetHeight;
 	var canvas,context;
-	var num = 250;
+	var num = 230;
+	if(/Android|ios|Mobile|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|MQQBrowser/i.test(navigator.userAgent))
+    	num = 100;	
 	var stars = [];
 	var mouseX = WINDOW_WIDTH/2;
 	var mouseY = WINDOW_HEIGHT/2;

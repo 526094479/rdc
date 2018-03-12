@@ -16,11 +16,19 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-<img src="..\img\planet.png" class='planet'>
-<img src="..\img\ship.png" class='ship'>
 <div class="canvas-box">
 	<canvas id="canvas">你的浏览器不支持canvas</canvas>
 </div>
+<div class='loader'>
+	<div class="feidie_div">
+		<div>
+			<img src="..\img\daship.png" class='feidie tiaodong'>
+		</div>
+	</div>	
+</div>
+<div id='main' style="display: none;">
+<img src="..\img\planet.png" class='planet'>
+<img src="..\img\ship.png" class='ship'>
 <div class="container">
 	<!--大标题 begin-->
      <div class="clrfix" id='top'>
@@ -68,7 +76,7 @@
 	    </div>
 
 		<div class="introdution_box">
-			<div class="introdution slideIn">
+			<div class="introdution bounceIn animated">
 				<div class="title">前端开发</div>
 				<div class="introdution_contain introdution_f">
 					<p class="introdution_main"> RDC Web前端开发组，基于 HTML / CSS / Javascript 前端语言进行开发，专注于呈现良好的网站界面和网页交互，提供给用户更好的视觉冲击和用	户体验，是当前就业面最广的方向。组内定期开展技术分享会，与此同时，一些已经进入阿里、腾讯实习工作的师兄师姐也会经常与我们进行经验交流和指导。
@@ -123,7 +131,7 @@
 				<p class="introdution_main">如果你有出色的学习能力、对知识有近乎渴望的追求，以及良好的抗压力和团队协作力，那就加入我们吧！在这里和你的队友们一起打造属于你们的BAT之路！</p>
 			</div>
 		</div>
-		<div class="ma5slider anim-horizontal horizontal-dotss anim-horizontal loop-mode about_slider autoplay" data-scroll-reveal="enter left and move 50px over 1.33s">
+		<div class="ma5slider anim-horizontal horizontal-dots anim-horizontal loop-mode about_slider autoplay  center-dots inside-dots" data-scroll-reveal="enter left and move 50px over 1.33s">
 			<div class="slides">
 				<a href="#slide-1"><img class="slider_img" src="../img/1.jpg" alt=""></a>
 				<a href="#slide-2"><img class="slider_img" src="../img/2.jpg" alt=""></a>
@@ -135,7 +143,7 @@
 
 	<!--报名表 begin-->
 	<div id='form'>
-		<div class="f_title faguang">加入我们！<i class="fa fa-hand-pointer-o" style="padding-left:16px"></i></div>
+		<div class="f_title faguang">加入我们！</div>
 		<div id="form_main" style="display: none;">
 			<div class="form_item1">
 				<label>名字</label>
@@ -234,7 +242,7 @@
 	</div>
 </div>
 <!--侧边菜单 end-->
-
+<div style="display: none;">
 <!-- 弹出框 -->
 <div id="tipBox">
 	<div class="tipBox_div"><h4>消息</h4></div>

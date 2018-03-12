@@ -1,12 +1,25 @@
 $(function () {
+    setTimeout(function () {
+        if(document.readyState === 'complete') {
+            $('.feidie').removeClass('tiaodong').addClass('xiaoshi');
+            setTimeout(function(){
+            $('.feidie').css('display', 'none');    
+            $('.loader').fadeOut();    
+            $('#main').fadeIn();
+            $('.slides').css('height', '100px');
+            console.log($('.slides'))
+            },500);
+        }
+    },1600);
+
 
 	$('.group').click(function(){
 		var that = this;
-		if(!$('.chosen:eq(0)').is(this) && $('.slideIn').length){
+		if(!$('.chosen:eq(0)').is(this) && $('.bounceIn').length){
 			$('.chosen:eq(0)').removeClass("chosen");
 			$(this).addClass("chosen");
-			$('.slideIn:eq(0)').removeClass("slideIn").addClass("slideOut");
-			setTimeout(function(){$('.slideOut:eq(0)').css("display", "none").removeClass("slideOut");$('.introdution:eq('+$(that).attr("groupid")+')').css("display", "block").addClass("slideIn")},1000);
+			$('.bounceIn:eq(0)').removeClass("bounceIn animated").addClass("bounceOut animated");
+			setTimeout(function(){$('.bounceOut:eq(0)').css("display", "none").removeClass("bounceOut animated");$('.introdution:eq('+$(that).attr("groupid")+')').css("display", "block").addClass("bounceIn animated")},500);
 		}
 	});	
 
